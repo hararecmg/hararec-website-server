@@ -1,0 +1,30 @@
+{
+  "name": "hararec-website-server",
+  "version": "0.1.0",
+  "description": "¡Bienvenidos a mi sitio web personal! 🌐 Aquí encontrarás el código fuente del servidor, hecho con Express y Typescript 🚀, y podrás conocer un poco más sobre cómo funciona mi sitio web.",
+  "main": "dist/app.js",
+  "scripts": {
+    "start": "node dist/app.js",
+    "build": "tsc",
+    "test": "jest --detectOpenHandles --forceExit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hararecmg/hararec-website-server.git"
+  },
+  "keywords": [
+    "Node.js",
+    "TypeScript",
+    "Express",
+    "Socket.io"
+  ],
+  "author": "hararecmg",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hararecmg/hararec-website-server/issues"
+  },
+  "devDependencies": {
+    "tslint": "^6.1.3",
+    "typescript": "^5.0.4"
+  }
+}
