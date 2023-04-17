@@ -1,13 +1,15 @@
 import { Application, json } from 'express';
-import cors from 'cors';
 import helmet from 'helmet';
-import { MiddlewareConfig } from '../models/middleware-config.class.js';
+import { MiddlewareConfig } from '../models/middleware-config.class';
+import { customCors } from '../secure/cors-options';
+import { limiter } from '../secure/rate-limit';
 
 export class GlobalMiddlewareConfig extends MiddlewareConfig {
 
     constructor() {
         super([
-            cors(),
+            customCors,
+            limiter,
             helmet(),
             json(),
         ]);
