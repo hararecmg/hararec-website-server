@@ -1,5 +1,6 @@
 import { Application, json } from 'express';
 import helmet from 'helmet';
+import mongoSanitize from 'express-mongo-sanitize';
 import { MiddlewareConfig } from '../models/middleware-config.class';
 import { customCors } from '../secure/cors-options';
 import { limiter } from '../secure/rate-limit';
@@ -12,6 +13,7 @@ export class GlobalMiddlewareConfig extends MiddlewareConfig {
             limiter,
             helmet(),
             json(),
+            mongoSanitize(),
         ]);
     }
 
