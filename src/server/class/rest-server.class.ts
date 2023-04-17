@@ -1,3 +1,4 @@
+import { GlobalMiddlewareConfig } from '../../config/middlewares';
 import { ConfigureRoutes } from '../interfaces/configuration.interface';
 import { Server } from '../models/server.model';
 
@@ -15,6 +16,8 @@ export class RestServer extends Server implements ConfigureRoutes {
     }
 
     configureMiddlewares(): void {
+        const globalMiddlewareConfig = new GlobalMiddlewareConfig();
+        globalMiddlewareConfig.init(this._app);
     }
 
     listen() {
