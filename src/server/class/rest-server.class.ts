@@ -1,5 +1,5 @@
 import { ConfigureRoutes } from '../interfaces/configuration.interface';
-import { Server } from '../models/serve.model';
+import { Server } from '../models/server.model';
 
 export class RestServer extends Server implements ConfigureRoutes {
     

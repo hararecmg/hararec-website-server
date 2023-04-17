@@ -1,7 +1,7 @@
 import { Server as SocketIOServer } from 'socket.io';
 import { createServer, Server as HttpServer } from 'http';
 import { ConfigureSockets } from '../interfaces/configuration.interface';
-import { Server } from '../models/serve.model';
+import { Server } from '../models/server.model';
 
 export class SocketServer extends Server implements ConfigureSockets {
 
