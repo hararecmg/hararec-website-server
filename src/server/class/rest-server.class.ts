@@ -1,4 +1,4 @@
-import { GlobalMiddlewareConfig } from '../../config/middlewares';
+import { GlobalMiddlewareConfig } from '../../config';
 import { ConfigureRoutes } from '../interfaces/configuration.interface';
 import { Server } from '../models/server.model';
 
@@ -22,7 +22,7 @@ export class RestServer extends Server implements ConfigureRoutes {
 
     listen() {
         this._app.listen( this._port, () => {
-            console.log(`The server is running on port ${this._port}`)
+            console.log(`The server is running on port ${this._port}`);
         } );
     }
 
