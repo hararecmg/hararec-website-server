@@ -1,0 +1,1 @@
+export { GlobalRouter } from './class/global-router.class';
